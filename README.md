@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+✨ HishobPatra.com – Your Smart Digital Ledger & Invoicing Assistant [https://hishob-patra.vercel.app]
 
-## Getting Started
+- HishobPatra (हिशोबपत्र) is a modern SaaS platform for small businesses that blends traditional simplicity with powerful features like digital ledgers and professional invoice generation. Designed for India's shopkeepers, freelancers, and micro-entrepreneurs, it makes managing customers, payments, and bills effortless—even for non-tech users.
 
-First, run the development server:
+## ToDo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [ ] Setup Husky and Github Actions for CI/CD with vercel.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [ ] Auth
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  - [ ] NextAuth with Google Provider and Github Provider.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- [ ] On Board Page (Setu User details like username, profile pic, enable / disable notifications.)
 
-## Learn More
+## Pages
 
-To learn more about Next.js, take a look at the following resources:
+- [ ] Static Pages Home, Contact, About, Terms, Privacy Policy,
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [ ] Dynamic Page Login, Register, Invoices,
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## API / Server Actions
 
-## Deploy on Vercel
+- [ ] CRUD for Invoices
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 3rd party API
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Nodemailer , Mail trap for Email Feedback.
+
+## Future Stretch
+
+- [ ] Integrate AI
+
+## Revenue Model
+
+### Free Tier (₹0/month)
+
+- Target Audience: Individual retailers, kirana shops, freelancers
+- Features:
+  - [ ] Up to 25 customers
+  - [ ] Basic ledger entry
+  - [ ] Local language support (Hindi, English)
+  - [ ] 5 invoices per month
+  - [ ] Basic customer management
+  - [ ] Mobile app access
+  - [ ] Community support
+
+### Starter Plan (₹299/month)
+
+- Target Audience: Small businesses, growing retailers
+- Features:
+  - [ ] Up to 100 customers
+  - [ ] Advanced ledger features
+  - [ ] Multi-language support
+  - [ ] 50 invoices per month
+  - [ ] PDF/CSV export
+  - [ ] Basic analytics
+  - [ ] Email support
+  - [ ] Custom invoice templates
+
+### Business Plan (₹799/month)
+
+- Target Audience: Medium businesses, multiple branches
+- Features:
+  - [ ] Unlimited customers
+  - [ ] Full ledger features with analytics
+  - [ ] GST compliance & filing support
+  - [ ] Unlimited invoices
+  - [ ] Advanced reporting
+  - [ ] Priority support
+  - [ ] Bulk operations
+  - [ ] Data backup
