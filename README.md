@@ -2,6 +2,10 @@
 
 - HishobPatra (हिशोबपत्र) is a modern SaaS platform for small businesses that blends traditional simplicity with powerful features like digital ledgers and professional invoice generation. Designed for India's shopkeepers, freelancers, and micro-entrepreneurs, it makes managing customers, payments, and bills effortless—even for non-tech users.
 
+## Assets
+
+- Deep Safron or Turmeric orange #FFB300
+
 ## ToDo
 
 - [ ] Setup Husky and Github Actions for CI/CD with vercel.
