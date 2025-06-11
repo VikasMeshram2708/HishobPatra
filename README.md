@@ -8,9 +8,11 @@
 
 ## ToDo
 
-- [ ] Setup Husky and Github Actions for CI/CD with vercel.
+- [x] Add DarkMode Themed Header Icon.
 
-- [ ] Auth
+- [x] Setup Husky and Github Actions for CI/CD with vercel.
+
+- [x] Auth
 
   - [ ] NextAuth with Google Provider and Github Provider.
 

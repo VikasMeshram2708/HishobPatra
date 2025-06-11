@@ -4,6 +4,7 @@
 import DashNavbar from "@/components/dashboard/dash-navbar";
 import { DashSidebar } from "@/components/dashboard/dash-sidebar";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import AuthProvider from "../context/auth-provider";
 
 export default function RootLayout({
   children,
@@ -17,7 +18,7 @@ export default function RootLayout({
       <main className="flex flexlcol min-h-screen realtive w-full h-full bg-background">
         <div className="flex-1">
           <DashNavbar />
-          {children}
+          <AuthProvider>{children}</AuthProvider>
         </div>
       </main>
     </SidebarProvider>
