@@ -7,9 +7,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div>
+    <div className="bg-background relative flex flex-col min-h-screen">
       <Navbar />
-      {children}
+      <main className="flex-1">{children}</main>
       <Footer />
     </div>
   );
