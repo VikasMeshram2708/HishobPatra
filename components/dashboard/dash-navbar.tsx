@@ -8,17 +8,21 @@ import React from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Input } from "../ui/input";
 import { SearchIcon } from "lucide-react";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/app/utils/auth-options";
 
-export default function DashNavbar() {
+export default async function DashNavbar() {
+  const session = await getServerSession(authOptions);
+
   return (
-    <nav className="w-full bg-background p-6">
+    <nav className="w-full bg-background p-6 border-b">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between">
           <Link href="/">
             {/* image or heading */}
             <Image
               src="https://ik.imagekit.io/kxstc2rku/HishobPatra/HP-header.png?updatedAt=1749549885452"
-              alt="hishbo-patra official"
+              alt="hishbopatra official"
               width={50}
               height={50}
               className="w-auto h-auto object-contain bg-cover"
@@ -36,10 +40,12 @@ export default function DashNavbar() {
             </div>
             <Avatar>
               <AvatarImage
-                alt="user name"
-                src="https://github.com/shadcn.png"
+                alt={session?.user?.name ?? "User Name"}
+                src={session?.user?.image ?? "https://github.com/shadcn.png"}
               />
-              <AvatarFallback>CN</AvatarFallback>
+              <AvatarFallback>
+                {session?.user?.name?.charAt(0) ?? "U"}
+              </AvatarFallback>
             </Avatar>
           </div>
         </div>

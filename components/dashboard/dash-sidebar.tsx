@@ -1,11 +1,20 @@
 /**
  * This sidebar for dashboard sidebar
  */
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+"use client";
+import {
+  Calendar,
+  FileText,
+  Home,
+  LogOut,
+  Search,
+  Settings,
+} from "lucide-react";
 
 import {
   Sidebar,
   SidebarContent,
+  SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -13,18 +22,20 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
+import { Button } from "../ui/button";
+import { signOut } from "next-auth/react";
 
 // Menu items.
 const items = [
   {
     title: "Home",
-    url: "#",
+    url: "/dashboard",
     icon: Home,
   },
   {
-    title: "Inbox",
-    url: "#",
-    icon: Inbox,
+    title: "Invoices",
+    url: "/dashboard/invoices",
+    icon: FileText,
   },
   {
     title: "Calendar",
@@ -65,6 +76,12 @@ export function DashSidebar() {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarFooter>
+        <Button onClick={async () => await signOut()} variant={"destructive"}>
+          <LogOut />
+          Logout
+        </Button>
+      </SidebarFooter>
     </Sidebar>
   );
 }

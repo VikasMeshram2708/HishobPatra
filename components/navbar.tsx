@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import Image from "next/image";
 import { ToggleMode } from "./toggle-mode";
+import SignInBtn from "./actions/sign-in-btn";
 
 export default function Navbar() {
   return (
@@ -21,12 +21,11 @@ export default function Navbar() {
           </Link>
 
           <div className="flex items-center gap-2">
-            <Button variant="link">
-              <Link href="/login">Login</Link>
-            </Button>
-            <Button>
-              <Link href="/signup">Signup</Link>
-            </Button>
+            <Suspense
+              fallback={<p className="text-sm font-medium">Loading...</p>}
+            >
+              <SignInBtn />
+            </Suspense>
             <ToggleMode />
           </div>
         </div>

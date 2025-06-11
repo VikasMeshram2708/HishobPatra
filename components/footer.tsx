@@ -161,7 +161,7 @@ export default function Footer() {
                 placeholder="Enter your email"
                 className="flex-1"
               />
-              <Button className="bg-[#FFB300] hover:bg-[#FFB300]/90">
+              <Button>
                 <Mail size={16} className="mr-2" />
                 Subscribe
               </Button>
